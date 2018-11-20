@@ -14,7 +14,7 @@ const store = createStore();
 ReactDOM.render(
 <Provider store={store}>
 	<Router history={history}>
-		<Main />
+		<Home />
 	</Router>
 </Provider>,
 document.getElementById('root'),
