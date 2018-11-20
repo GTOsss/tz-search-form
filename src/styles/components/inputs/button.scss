@@ -1,0 +1,10 @@
+@mixin button {
+	border: none;
+	background: transparent;
+	padding: 4px 20px;
+	border-radius: 4px;
+}
+
+.button--default {
+	@include button;
+}
