@@ -9,7 +9,7 @@ const middleware = applyMiddleware(thunk);
 const enhancer = !isProduction ? composeWithDevTools(middleware) : middleware;
 const reducers = {
   ...projectReducers,
-  reduxForm: reduxFormReducer,
+  form: reduxFormReducer,
 };
 
 export default () => createStore(combineReducers(reducers), enhancer);
