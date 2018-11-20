@@ -11,7 +11,7 @@ class InputSelect extends Component {
   render() {
     const { ...props } = this.props;
     return (
-      <ReactSelect onChange={this.onChange} {...props} />
+      <ReactSelect placeholder="Выберите..." onChange={this.onChange} {...props} />
     );
   }
 }
