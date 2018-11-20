@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import SearchForm from '@blocks/search-form';
+
+import style from '@styles/containers/base.scss';
 
 class Search extends Component {
+  onSubmit = (values) => {
+    console.log(values);
+  };
+
   render() {
     return (
-			<div>
-
-			</div>
+      <div className={style.bodyRouteDefault}>
+        <SearchForm onSubmit={this.onSubmit} />
+      </div>
     );
   }
 }
