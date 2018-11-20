@@ -1,0 +1,26 @@
+@mixin navLink {
+	display: block;
+	padding: 4px 10px;
+	color: black;
+	background-color: white;
+	border: 1px solid #7b7b7b;
+	transition: background-color;
+	text-decoration: none;
+
+	&:not(:nth-child(1)) {
+		margin-left: -1px;
+	}
+
+	&:hover {
+		background-color: #eaeaea;
+	}
+}
+
+.navLink--default {
+	@include navLink;
+	background-color: #aeaeae;
+}
+
+.navLink-active--default {
+	@include navLink;
+}
