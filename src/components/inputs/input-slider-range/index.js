@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import { Range } from 'rc-slider';
 import { addSpaceToNumber } from '@utils/string';
 
-import 'rc-slider/assets/index.css';
-import './input-slider-range.scss';
+import './input-slider-range.css';
 
 class InputSliderRange extends Component {
   static transformValue = (value) => `${addSpaceToNumber(value[0])} - ${addSpaceToNumber(value[1])}`;
