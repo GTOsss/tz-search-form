@@ -51,12 +51,11 @@ module.exports = require('./webpack.base.config')({
     require('autoprefixer'),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-      'process.env.NEEO_RATE': JSON.stringify(projectConfig.NEEORate),
-      'process.env.NEEO_TO_ETH': JSON.stringify(projectConfig.NEEOtoETH),
-      //'process.env.BACKEND_URL': JSON.stringify(process.env.BACKEND_URL) || JSON.stringify(projectConfig.backendUrl),
+      'process.env.WITHOUT_BACK': JSON.stringify(process.env.WITHOUT_BACK),
+      'process.env.BACKEND_URL': JSON.stringify(process.env.BACKEND_URL) || JSON.stringify(projectConfig.backendUrl),
     }),
     new HtmlWebpackPlugin({
-      title: 'NEEO',
+      title: 'Тестовое задание',
       template: path.join(__dirname, '../src/index.template.html'),
       filename: 'index.html',
     }),

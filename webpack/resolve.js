@@ -12,6 +12,7 @@ module.exports = {
       '@core': path.resolve(__dirname, '../src/core/'),
       '@utils': path.resolve(__dirname, '../src/utils/'),
       '@blocks': path.resolve(__dirname, '../src/blocks'),
+      '@mock-data': path.resolve(__dirname, '../src/mock-data'),
     },
   },
 };
