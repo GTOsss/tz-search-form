@@ -8,7 +8,7 @@ import Search from '@containers/search';
 class Home extends Component {
   renderHomeBody = () => (
     <div>
-      <h1>Home page</h1>
+      <h1 className={style.title}>Home page</h1>
     </div>
   );
 
