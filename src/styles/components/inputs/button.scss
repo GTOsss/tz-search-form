@@ -6,6 +6,10 @@
 	background: #3bbbcd;
 	height: 40px;
 	cursor: pointer;
+
+	&:disabled {
+		opacity: 0.5;
+	}
 }
 
 .button--default {
