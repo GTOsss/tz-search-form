@@ -16,7 +16,7 @@ const countRoomsOptions = [
   { label: '6-комнатная', value: '6' },
 ];
 
-const SearchForm = ({ handleSubmit }) => (
+const SearchForm = ({ handleSubmit, isLoading }) => (
   <form className={cx(formStyle.formDefault, style.searchForm)} onSubmit={handleSubmit}>
     <div className={style.wrapInputs}>
       <div className={style.wrapCheckboxes}>
@@ -28,16 +28,27 @@ const SearchForm = ({ handleSubmit }) => (
         <Field name="price" component={InputSliderRange} />
       </div>
     </div>
-    <Button className={style.buttonSubmit} type="submit">Подобрать</Button>
+    <Button
+      disabled={isLoading}
+      className={style.buttonSubmit}
+      type="submit"
+    >
+      {'Подобрать'}
+    </Button>
   </form>
 );
 
 SearchForm.propTypes = {
   handleSubmit: PropTypes.func,
+  isLoading: PropTypes.bool,
 };
 
 SearchForm.defaultProps = {
   handleSubmit: undefined,
+  isLoading: false,
 };
 
-export default reduxForm({ form: 'SearchForm' })(SearchForm);
+export default reduxForm({
+  form: 'SearchForm',
+  initialValues: { mortgage: false, installment: false },
+})(SearchForm);
