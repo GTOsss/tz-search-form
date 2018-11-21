@@ -15,6 +15,13 @@ class InputSliderRange extends Component {
     this.state = { currentValue: InputSliderRange.transformValue(defaultValue) };
   }
 
+  componentDidMount() {
+    const { input: { onChange }, defaultValue } = this.props;
+    if (defaultValue) {
+      onChange(defaultValue);
+    }
+  }
+
   onChange = (value) => {
     const { input: { onChange } } = this.props;
     onChange(value);

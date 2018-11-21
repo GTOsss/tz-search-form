@@ -3,6 +3,13 @@ import PropTypes from 'prop-types';
 import ReactSelect from 'react-select';
 
 class InputSelect extends Component {
+  componentDidMount() {
+    const { input: { onChange }, defaultValue } = this.props;
+    if (defaultValue) {
+      onChange(defaultValue);
+    }
+  }
+
   onChange = (value) => {
     const { input: { onChange } } = this.props;
     onChange(value);
